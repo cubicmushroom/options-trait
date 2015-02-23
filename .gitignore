@@ -84,3 +84,5 @@ crashlytics.properties
 crashlytics-build.properties
 
 
+
+tests/_output/*
