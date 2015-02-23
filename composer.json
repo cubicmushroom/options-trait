@@ -2,9 +2,6 @@
     "name": "cubicmushroom/options-trait",
     "version": "0.1.0",
     "description": "Trait to make it easy to add options arrays to object classes",
-    "require-dev": {
-        "codeception/codeception": "2.0.10.1"
-    },
     "license": "MIT",
     "authors": [
         {
@@ -13,5 +10,13 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {}
+    "require": {},
+    "require-dev": {
+        "codeception/codeception": "2.0.10.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "CubicMushroom\\OptionsTrait\\": "src/"
+        }
+    }
 }
