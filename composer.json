@@ -18,5 +18,13 @@
         "psr-4": {
             "CubicMushroom\\OptionsTrait\\": "src/"
         }
+    },
+    "archive": {
+        "exclude": [
+            "test",
+            "vendor",
+            ".DS_Store",
+            "*.log"
+        ]
     }
 }
