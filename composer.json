@@ -1,6 +1,6 @@
 {
     "name": "cubicmushroom/options-trait",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Trait to make it easy to add options arrays to object classes",
     "license": "MIT",
     "authors": [
