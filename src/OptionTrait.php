@@ -67,11 +67,11 @@ trait OptionTrait
 
     /**
      * @param array $options  Options passed
-     * @param array $defaults Default options
+     * @param array $defaults [optional] Default options
      *
      * @return $this
      */
-    public function setOptions(array $options, array $defaults)
+    public function setOptions(array $options, array $defaults = [])
     {
         $options = array_merge($defaults, $options);
 

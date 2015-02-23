@@ -118,6 +118,25 @@ class OptionsTraitTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($options['option4'], $o->getOption('option4'));
         $this->assertEquals($options['option5'], $o->getOption('option5'));
     }
+
+
+    /**
+     * Tests not passing default values to setOptions works OK
+     */
+    public function testNotPassingDefaultValuesToSetOptionsWorksOk()
+    {
+        $options = [
+            'option1' => 123,
+            'option2' => 'abc',
+            'option3' => new \DateTime(),
+        ];
+
+        $o = new TestClassNotUsingDefaults($options);
+
+        $setOptions = $o->getOptions();
+
+        $this->assertEquals($options, $setOptions);
+    }
 }
 
 
@@ -158,5 +177,27 @@ class TestClassWithDefaults
     function __construct(array $options, array $defaults)
     {
         $this->setOptions($options, $defaults);
+    }
+}
+
+class TestClassNotUsingDefaults
+{
+    use OptionTrait;
+
+    /**
+     * @param array $options
+     */
+    function __construct(array $options)
+    {
+        $this->setOptions($options);
+    }
+
+
+    /**
+     * @return array
+     */
+    public function getOptions()
+    {
+        return $this->options;
     }
 }
